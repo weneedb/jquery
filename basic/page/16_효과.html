@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .box{ background-color: #eee; width: 400px; padding: 10px;}
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">sildup</button>
+        <button class="btn2">fadein</button>
+    </p>
+    <p>
+        <button class="btn3">toggleslide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeto(0.3)</button>
+        <button class="btn5">fadeto(1)</button>
+    </p>
+
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vel libero dicta quod unde modi eos sequi aut consectetur, fugit rerum reiciendis nihil quo possimus commodi. Sapiente numquam totam distinctio?
+    </div>
+
+
+
+    <script>
+        // 숨김 hide(), fadeOut(), slideUP()
+        // 보이기 show(), fadeIn(), slideDown()
+        // 숨김+보임 toggle(), fadeToggle(), slideToggle()
+        // fadeTo(투명도 지정)
+
+        $('.btn2').hide()
+
+        $('.btn1').on('click', function(){
+            $('.box').slideUp('fast', 'linear', function(){
+                $('.btn1').hide()
+                $('.btn2').show()
+            })
+        })
+
+        $('.btn2').on('click', function(){
+            $('.box').fadeIn(1000, 'swing', function(){
+                $('.btn2').hide()
+                $('.btn1').show()
+            })
+        })
+
+        $('.btn3').on('click', function(){
+            $('.box').slideToggle()
+        })
+
+        $('.btn4').on('click', function(){
+            $('.box').fadeTo('fast', 0.3)
+        })
+
+        $('.btn5').on('click', function(){
+            $('.box').fadeTo('fast', 1)
+        })
+
+    </script>
+
+</body>
+</html>
