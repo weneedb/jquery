@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>모달</h1>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis debitis molestiae id, sapiente fugit ducimus, neque eveniet, ullam autem necessitatibus laborum. Voluptate repudiandae neque voluptas nostrum porro aspernatur, natus incidunt a praesentium pariatur sapiente ipsam aliquam aperiam odio tempora, consequuntur sequi hic aut unde voluptatum amet eaque. Itaque, nihil esse.</p>
+
+        <a href="#" class="more">read more...</a>
+    </div>
+
+    <div class="dimm"></div>
+
+    <div class="modal">
+        <h2>안녕하세요</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, molestias quibusdam id eum dolore repellat suscipit fugiat provident? Voluptatibus vero totam cupiditate explicabo, odio soluta ut praesentium animi! Quasi, minima.</p>
+        <button class="close_btn">close</button>
+    </div>
+
+    
+    <script>
+        var moreBtn = $('.more')
+        var closeBtn = $('.close_btn')
+        var dimm = $('.dimm')
+        var modal = $('.modal')
+        // $변수 or _변수 가능 
+
+        moreBtn.on('click',function(){
+            dimm.show()
+            modal.show()
+        })
+
+        closeBtn.on('click',function(){
+            dimm.hide()
+            modal.hide()
+        })
+
+
+    </script>
+</body>
+</html>
