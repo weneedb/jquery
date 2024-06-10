@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+        <div class="logo">
+            <img src="../imgs/logo.svg" alt="">
+        </div>
+        <ul class="gnb">
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">가치</a></li>
+            <li><a href="#">홍보</a></li>
+            <li><a href="#">투자</a></li>
+            <li><a href="#">채용</a></li>
+        </ul>
+        <div class="user">
+            <i class="xi-user"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="slide"><img src="../imgs/slide_01.jpg" alt=""></div>
+
+        <section>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque laborum earum adipisci impedit illo doloribus sapiente quos cupiditate alias quibusdam quae maxime voluptatibus, eius explicabo ex aperiam nostrum, ipsum quia.</p>
+        </section>
+    </main>
+    </div>    
+
+    <script>
+        var headerClone = $('header').contents().clone()   
+        var header2 = $('<header class="header2"></header>')
+
+        header2.append(headerClone)
+        header2.prependTo('body')
+
+        var scrollValue = $('header').outerHeight() + 100
+
+        $(window).on('scroll', function() {
+            if($(this).scrollTop() > scrollValue) {
+                header2.addClass('show')
+                header2.find('img').attr('src', '../imgs/logo_s.svg')
+            } else {
+                header2.removeClass('show')
+            }
+        })
+    </script>        
+</body>
+</html>

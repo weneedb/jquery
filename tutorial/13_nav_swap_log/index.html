@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+        <div class="logo">
+            <img src="../imgs/logo.svg" alt="">
+        </div>
+        <ul class="gnb">
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">가치</a></li>
+            <li><a href="#">홍보</a></li>
+            <li><a href="#">투자</a></li>
+            <li><a href="#">채용</a></li>
+        </ul>
+        <div class="user">
+            <i class="xi-user"></i>
+        </div>
+        </header>
+
+        <main>
+            <div class="slide">
+                <img src="../imgs/slide_01.jpg" alt="">
+            </div>
+
+            <section>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum adipisci corporis iure accusamus, reprehenderit explicabo, ab cum exercitationem sint magni quas id facilis cupiditate rerum libero eveniet dolorum, assumenda earum.</p>
+            </section>
+
+        </main>
+
+    </div>    
+
+    <script>
+        $(window).scroll(function() {
+            function logoSwap(imgUrl) {
+                $('.logo').find('img').attr('src', imgUrl)
+            }
+
+            if($(window).scrollTop() > 500) {
+                $('header').addClass('small')
+                logoSwap('../imgs/logo_s.svg')
+            } else {
+                $('header').removeClass('small')
+                logoSwap('../imgs/logo.svg')
+            }
+
+        })
+    </script>        
+</body>
+</html>
